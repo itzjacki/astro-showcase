@@ -1,0 +1,95 @@
+Components demo
+
+<!--
+---
+import Card from "../components/Card.astro";
+
+const favoriteNumbers = [3, 7, 11, 13, 17, 19, 23, 29, 31, 37];
+---
+
+<html>
+  <head>
+    <title>Favorittall</title>
+  </head>
+  <body>
+    <main>
+      <h1>Favorittall</h1>
+      <p>Mine favorittall er:</p>
+      <ul>
+        {
+          favoriteNumbers.map((number) => (
+            <li>
+              <Card num={number} />
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </body>
+</html>
+-->
+
+Layouts demo
+
+<!-- 
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+
+const favoriteNumbers = [3, 7, 11, 13, 17, 19, 23, 29, 31, 37];
+---
+
+<html>
+  <Layout title="Favorittall">
+    <main>
+      <h1>Favorittall</h1>
+      <p>Mine favorittall er:</p>
+      <ul>
+        {
+          favoriteNumbers.map((number) => (
+            <li>
+              <Card num={number} />
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </ Layout>
+-->
+
+Script demo:
+
+<!-- 
+  
+---
+const favoriteNumbers = [3, 7, 11, 13, 17, 19, 23, 29, 31, 37];
+---
+
+<html>
+  <head>
+    <title>Favorittall</title>
+  </head>
+  <body>
+    <main>
+      <h1>Favorittall</h1>
+      <p>Mine favorittall er:</p>
+      <ul>
+        {favoriteNumbers.map((number) => <li>{number}</li>)}
+      </ul>
+      <button onclick='alert(getRandomNumber())'
+        >Gi meg et tilfeldig favorittall!</button
+      >
+    </main>
+    <script is:inline>
+      const favoriteNumbers = [3, 7, 11, 13, 17, 19, 23, 29, 31, 37];
+
+      function getRandomNumber() {
+        return favoriteNumbers[
+          Math.floor(Math.random() * favoriteNumbers.length)
+        ];
+      }
+    </script>
+  </body>
+</html>
+
+ -->

@@ -1,0 +1,22 @@
+---
+const favoriteNumbers = [3, 7, 11, 13, 17, 19, 23, 29, 31, 37];
+
+function getRandomNumber() {
+  return favoriteNumbers[Math.floor(Math.random() * favoriteNumbers.length)];
+}
+---
+
+<html>
+  <head>
+    <title>Favorittall</title>
+  </head>
+  <body>
+    <main>
+      <h1>Favorittall</h1>
+      <p>Mine favorittall er:</p>
+      <ul>
+        {favoriteNumbers.map((number) => <li>{number}</li>)}
+      </ul>
+    </main>
+  </body>
+</html>
