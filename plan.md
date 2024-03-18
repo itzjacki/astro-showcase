@@ -30,10 +30,6 @@
 
 # TILBAKE TIL SLIDES
 
-- client-direktiver
-- Støtte for andre rammeverk
-- Støtte for andre verktøy
-
 Nå er vi på punktet der Astro virkelig blir awesome for content-driven sites
 
 - MD-støtte
